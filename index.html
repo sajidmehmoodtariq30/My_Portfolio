@@ -1,13 +1,517 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sajid Mehmood</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sajid Mehmood Tariq - Terminal Developer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Sajid Mehmood Tariq - 17-year-old Terminal Developer from Pakistan. MERN Stack specialist, AI collaboration expert, international clients. Honest, transparent web development with modern tools.">
+    <meta name="keywords" content="Pakistani developer, MERN stack developer, web development Pakistan, AI collaboration, freelance developer Lahore, React developer, Node.js expert, terminal developer">
+    <meta name="author" content="Sajid Mehmood Tariq">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sajid Mehmood Tariq - Terminal Developer from Pakistan">
+    <meta property="og:description" content="17-year-old MERN stack developer building amazing web applications with AI collaboration. International client experience, transparent development approach.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sajid.dev">
+    <meta property="og:image" content="https://sajid.dev/og-image.jpg">
+    <meta property="og:site_name" content="Sajid Mehmood Tariq Portfolio">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sajid Mehmood Tariq - Terminal Developer">
+    <meta name="twitter:description" content="17-year-old Pakistani developer specializing in MERN stack and AI collaboration">
+    <meta name="twitter:image" content="https://sajid.dev/twitter-image.jpg">
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#0ea5e9">
+    <link rel="canonical" href="https://sajid.dev">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💻%3C/text%3E%3C/svg%3E">
+    
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-text">
+            <div>Connecting to sajid.dev...</div>
+            <div>Loading neural networks...</div>
+            <div>Initializing AI collaboration...</div>
+            <div>Access granted<span class="cursor-blink">_</span></div>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <canvas id="backgroundCanvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- Live Status Indicator -->
+    <div class="live-status" id="liveStatus">
+        <span class="status-dot"></span>
+        <span>Available for Work</span>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="#" class="logo">Terminal Developer</a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="nav-toggle">☰</button>
+            </nav>
+            <button class="lang-toggle" onclick="toggleLanguage()">اردو</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content fade-in">
+                <h1 class="glitch" id="heroTitle">SAJID MEHMOOD TARIQ</h1>
+                <h2 class="hero-subtitle" id="heroSubtitle">17 • Pakistan • Terminal Developer</h2>
+                <p class="hero-description" id="heroDescription">
+                    I don't pretend to be perfect. I use AI, I learn from failures, and I'm building the future one command at a time.
+                </p>
+            </div>
+        </section>
+
+        <!-- Who Am I Section -->
+        <section class="fade-in">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-button close"></div>
+                    <div class="terminal-button minimize"></div>
+                    <div class="terminal-button maximize"></div>
+                    <div class="terminal-title">./whoami --detailed</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="command-line">
+                        <span class="prompt">sajid@dev:~$</span>
+                        <span class="command">whoami --full-stack</span>
+                    </div>
+                    <div class="output" id="whoamiOutput">Name: Sajid Mehmood Tariq
+Age: 17.5 years
+Location: Lahore, Pakistan 🇵🇰
+Status: BSCS Student @ UET KSK
+CGPA: 3.2/4.0
+Confession: I use AI and I'm proud of it</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="fade-in">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-button close"></div>
+                    <div class="terminal-button minimize"></div>
+                    <div class="terminal-button maximize"></div>
+                    <div class="terminal-title">./projects --showcase</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="command-line">
+                        <span class="prompt">sajid@dev:~$</span>
+                        <span class="command">ls -la ./my-work</span>
+                    </div>
+                    
+                    <!-- Project Filters -->
+                    <div class="project-filters">
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
+                        <button class="filter-btn" data-filter="web">Web Apps</button>
+                        <button class="filter-btn" data-filter="mobile">Mobile</button>
+                        <button class="filter-btn" data-filter="ai">AI Projects</button>
+                    </div>
+                    
+                    <div class="projects-grid">
+                        <div class="project-card" data-category="web">
+                            <h3 class="project-title">E-Commerce Platform</h3>
+                            <p class="project-description">Full-stack MERN application with real-time inventory, payment integration, and admin dashboard. Built with AI-assisted development.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Stripe</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sajidmehmoodtariq" class="project-link">GitHub</a>
+                                <a href="#" class="project-link">Live Demo</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="web">
+                            <h3 class="project-title">AI Code Reviewer</h3>
+                            <p class="project-description">Web application that analyzes code quality using OpenAI API. Provides suggestions for improvements and best practices.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">OpenAI API</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Tailwind</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sajidmehmoodtariq" class="project-link">GitHub</a>
+                                <a href="#" class="project-link">Live Demo</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="mobile">
+                            <h3 class="project-title">Task Manager Mobile App</h3>
+                            <p class="project-description">React Native app with offline sync, push notifications, and collaborative features. Clean UI with smooth animations.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Redux</span>
+                                <span class="tech-tag">Expo</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sajidmehmoodtariq" class="project-link">GitHub</a>
+                                <a href="#" class="project-link">Demo Video</a>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="ai">
+                            <h3 class="project-title">Smart Portfolio Generator</h3>
+                            <p class="project-description">AI-powered tool that generates custom portfolios based on user skills and preferences. Uses machine learning for optimization.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/sajidmehmoodtariq" class="project-link">GitHub</a>
+                                <a href="#" class="project-link">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="fade-in">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-button close"></div>
+                    <div class="terminal-button minimize"></div>
+                    <div class="terminal-button maximize"></div>
+                    <div class="terminal-title">./skills --matrix-view</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="command-line">
+                        <span class="prompt">sajid@dev:~$</span>
+                        <span class="command">cat skills.json | jq '.technical'</span>
+                    </div>
+                    <div class="skills-matrix">
+                        <div class="skill-item">
+                            <div class="skill-name">JavaScript/TypeScript</div>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">React/Next.js</div>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Node.js/Express</div>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">MongoDB/PostgreSQL</div>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Python/AI Integration</div>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-width="82%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Git/DevOps</div>
+                            <div class="skill-level">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Code Playground -->
+        <section class="fade-in">
+            <div class="code-playground">
+                <div class="code-header">
+                    <div class="code-title">Live Code Collaboration (Me + AI)</div>
+                    <button class="run-btn" onclick="runCode()">Execute</button>
+                </div>
+                <div class="code-area">
+                    <textarea class="code-input" id="codeInput" placeholder="// This is how I actually code - with AI as my pair programmer
+// Try editing this code and see it run!
+
+function buildAmazing() {
+    const developer = 'Sajid';
+    const ai = 'My coding partner';
+    const result = developer + ' + ' + ai + ' = Magic';
+    
+    return {
+        message: result,
+        skills: ['React', 'Node.js', 'AI Integration'],
+        honest: true,
+        future: 'Bright'
+    };
+}
+
+console.log(buildAmazing());"></textarea>
+                    <div class="code-output" id="codeOutput">// Output will appear here...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Stats Section -->
+        <section class="fade-in">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-button close"></div>
+                    <div class="terminal-button minimize"></div>
+                    <div class="terminal-button maximize"></div>
+                    <div class="terminal-title">./github --stats</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="command-line">
+                        <span class="prompt">sajid@dev:~$</span>
+                        <span class="command">gh stats --comprehensive</span>
+                    </div>
+                    
+                    <div class="github-stats">
+                        <div class="stat-card">
+                            <span class="stat-number" id="repos">15+</span>
+                            <div class="stat-label">Repositories</div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" id="followers">10+</span>
+                            <div class="stat-label">Followers</div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" id="following">25+</span>
+                            <div class="stat-label">Following</div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" id="streakDays">30+</span>
+                            <div class="stat-label">Day Streak</div>
+                        </div>
+                    </div>
+                    
+                    <!-- GitHub Activity Graph -->
+                    <div style="margin: 2rem 0; text-align: center;">
+                        <h4 style="color: #0ea5e9; margin-bottom: 1rem;">📊 GitHub Activity</h4>
+                        <img src="https://ghchart.rshah.org/0ea5e9/sajidmehmoodtariq" 
+                             alt="GitHub Activity Chart" 
+                             style="max-width: 100%; border-radius: 5px; border: 1px solid #0ea5e9;"
+                             loading="lazy">
+                        <div style="color: #888; font-size: 0.8rem; margin-top: 0.5rem;">
+                            Real-time contribution activity from GitHub
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="fade-in">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-button close"></div>
+                    <div class="terminal-button minimize"></div>
+                    <div class="terminal-button maximize"></div>
+                    <div class="terminal-title">./testimonials --verified</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="testimonials-carousel">
+                        <div class="testimonial-slide active">
+                            <div class="testimonial-text">
+                                "Sajid delivered our e-commerce platform ahead of schedule. His honest approach about using AI tools actually gave us more confidence in his abilities. The code quality is excellent and the site performs beautifully."
+                            </div>
+                            <div class="testimonial-author">Ahmed Hassan</div>
+                            <div class="testimonial-role">Business Owner, Local Client (Pakistan)</div>
+                        </div>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-text">
+                                "As a teacher, I was impressed by the test maker application Sajid built for our school. 
+                                It's user-friendly, efficient, and solved our paper management problems perfectly. 
+                                Proud of my son's work!"
+                            </div>
+                            <div class="testimonial-author">Mr. Mehmood Tariq</div>
+                            <div class="testimonial-role">Teacher & Father</div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-controls">
+                        <button class="carousel-btn" onclick="changeTestimonial(-1)">← Previous</button>
+                        <button class="carousel-btn" onclick="changeTestimonial(1)">Next →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="fade-in">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-button close"></div>
+                    <div class="terminal-button minimize"></div>
+                    <div class="terminal-button maximize"></div>
+                    <div class="terminal-title">./contact --professional</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="command-line">
+                        <span class="prompt">sajid@dev:~$</span>
+                        <span class="command" id="contactCommand">echo "Let's build something amazing together"</span>
+                    </div>
+                    <div class="output" id="contactOutput">Ready for collaboration. Available for freelance projects.
+Based in Lahore, Pakistan 🇵🇰
+Working hours: Flexible (because code doesn't sleep)
+Preferred communication: Professional but friendly</div>
+                    
+                    <!-- Time Zone Display -->
+                    <div class="timezone-display">
+                        <div class="local-time" id="lahoreTime">🇵🇰 Lahore Time: Loading...</div>
+                        <div class="timezone-info" id="clientTime">🌍 Your Local Time: Loading...</div>
+                        <div class="timezone-info" id="availability">⏰ Status: Checking availability...</div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h3 style="color: #0ea5e9; margin-bottom: 1rem;" id="contactFormTitle">Send Message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="project">Project Type:</label>
+                                <select id="project" name="project" style="width: 100%; padding: 0.8rem; background: rgba(0, 0, 0, 0.7); border: 1px solid #0ea5e9; border-radius: 5px; color: #0ea5e9; font-family: inherit;">
+                                    <option value="web-development">Web Development</option>
+                                    <option value="mobile-app">Mobile App</option>
+                                    <option value="consultation">Consultation</option>
+                                    <option value="collaboration">Collaboration</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message" rows="4" required placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn" id="submitBtn">Send Message 🚀</button>
+                        </form>
+                    </div>
+
+                    <!-- Resume Download -->
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <a href="#" class="resume-download" onclick="alert('Resume download feature coming soon!')">
+                            📄 Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Honest Confession Section -->
+        <section class="fade-in">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-button close"></div>
+                    <div class="terminal-button minimize"></div>
+                    <div class="terminal-button maximize"></div>
+                    <div class="terminal-title">./confession --honest</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="command-line">
+                        <span class="prompt">sajid@dev:~$</span>
+                        <span class="command">cat honesty.txt</span>
+                    </div>
+                    <div class="output">Yes, I use AI for coding assistance.
+Yes, I learn from Stack Overflow and YouTube.
+Yes, I'm still learning and making mistakes.
+
+But I understand every line of code I write.
+I solve real problems for real people.
+I deliver working products that create value.
+
+This is modern development.
+This is honest development.
+This is the future.
+
+- Sajid, Terminal Developer 🇵🇰</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- WhatsApp Testimonial Widget -->
+    <div class="testimonial-widget">
+        <button class="testimonial-btn" onclick="requestTestimonial()" title="Leave a testimonial on WhatsApp">
+            💬
+        </button>
+    </div>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-toggle" onclick="toggleChat()">💬</button>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <span>Chat with Sajid</span>
+                <button onclick="toggleChat()" style="float: right; background: none; border: none; color: #0ea5e9; cursor: pointer;">✕</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div style="margin-bottom: 1rem;">
+                    <strong>Sajid:</strong> Hi! 👋 Thanks for visiting my portfolio. I'm currently available for freelance projects. How can I help you?
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Type your message..." onkeypress="handleChatEnter(event)">
+                <button class="chat-send" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/sajidmehmoodtariq" class="social-link">GitHub</a>
+                <a href="https://linkedin.com/in/sajidmehmoodtariq" class="social-link">LinkedIn</a>
+                <a href="https://twitter.com/sajidmehmoodtariq" class="social-link">Twitter</a>
+                <a href="mailto:sajid@example.com" class="social-link">Email</a>
+            </div>
+            <p id="footerText">Built with ❤️, AI assistance, and pure determination</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
 </html>
